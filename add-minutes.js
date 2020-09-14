@@ -1,6 +1,6 @@
 import React from "react";
 
-const AddMinutes = ({minutes, setMinutes}) => {
+const AddMinutes = ({minutes, setMinutes, isDisabled}) => {
     const add = () => {
         if (minutes < 60) {
             setMinutes(minutes + 1);
@@ -12,13 +12,14 @@ const AddMinutes = ({minutes, setMinutes}) => {
     };
 
     return (
-        <input
+        <button
             type={"button"}
             id={"add1"}
-            value={"+ 1 min"}
             className={"timerBox__addSub"}
-            onClick={() => setMinutes(add)}
-        />
+            disabled={isDisabled}
+            onClick={() => setMinutes(add)}>
+            {"+ 1 min"}
+        </button>
     );
 };
 
