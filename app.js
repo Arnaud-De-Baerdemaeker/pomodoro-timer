@@ -80,14 +80,19 @@ const Timer = () => {
             </div>
             <div>
                 <AddSeconds
+                    minutes={minutes}
+                    setMinutes={setMinutes}
                     seconds={seconds}
                     setSeconds={setSeconds}
                     isDisabled={isDisabled}
                 />
                 <SubSeconds
+                    minutes={minutes}
+                    setMinutes={setMinutes}
                     seconds={seconds}
                     setSeconds={setSeconds}
                     isDisabled={isDisabled}
+                    setIsDisabled={setIsDisabled}
                 />
             </div>
         </div>
