@@ -1,12 +1,14 @@
 import React from "react";
 
-const SubSeconds = ({seconds, setSeconds, isDisabled}) => {
+const SubSeconds = ({minutes, setMinutes, seconds, setSeconds, isDisabled}) => {
     const substract = () => {
-        if (seconds >= 0) {
+        if (seconds > 0) {
             setSeconds(seconds - 10);
-        }
-
-        if (seconds === 0) {
+        } else if (seconds === 0 && minutes > 0) {
+            setMinutes(minutes - 1);
+            setSeconds(50);
+        } else if (minutes === 0 && seconds === 0) {
+            setMinutes(59);
             setSeconds(50);
         }
     };
