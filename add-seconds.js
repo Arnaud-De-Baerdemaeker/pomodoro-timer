@@ -1,6 +1,6 @@
 import React from "react";
 
-const AddSeconds = ({seconds, setSeconds}) => {
+const AddSeconds = ({seconds, setSeconds, isDisabled}) => {
     const add = () => {
         if (seconds < 60) {
             setSeconds(seconds + 10);
@@ -12,13 +12,14 @@ const AddSeconds = ({seconds, setSeconds}) => {
     };
 
     return (
-        <input
+        <button
             type={"button"}
             id={"add10"}
-            value={"+ 10 sec"}
             className={"timerBox__addSub"}
-            onClick={() => setSeconds(add)}
-        />
+            disabled={isDisabled}
+            onClick={() => setSeconds(add)}>
+            {"+ 10 sec"}
+        </button>
     );
 };
 
