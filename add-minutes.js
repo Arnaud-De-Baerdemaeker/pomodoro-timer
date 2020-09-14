@@ -2,11 +2,9 @@ import React from "react";
 
 const AddMinutes = ({minutes, setMinutes, isDisabled}) => {
     const add = () => {
-        if (minutes < 60) {
+        if (minutes < 59) {
             setMinutes(minutes + 1);
-        }
-
-        if (minutes === 59) {
+        } else if (minutes === 59) {
             setMinutes(0);
         }
     };
