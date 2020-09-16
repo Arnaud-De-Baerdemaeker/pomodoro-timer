@@ -18,163 +18,168 @@
 
 @media screen {
     @mixin default-buttons {
-		width: 50%;
 		border: none;
+		width: 50px;
+		height: 50px;
+		border-radius: 50px;
 		margin: 0;
-		padding: 5px;
-		border-radius: 2px;
+		padding: 0;
 		cursor: pointer;
 		background-color: rgb(239, 239, 239);
+		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 	}
 
 	body
 	{
+		display: flex;
 		height: 100%;
 		overflow-x: hidden;
 		margin: 0 auto 0 auto;
-		padding: 20px;
-		background-image: url("./../images/water-drop.jpg");
-        background-size: cover;
-        background-position: 50%;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
+		background-color: #E1E2E1;
 		font-family: "Noto Sans KR", cursive;
 
 		.timer // <div>
 		{
-			// ===== In the <Timer /> component =====
+			align-self: center;
+			width: 100%;
+
 			div
 			{
 				.timer__title // <h1>
 				{
 					font-size: 1.5rem;
+					height: 15vh;
+					line-height: 15vh;
+					background-color: #2e7c31;
 					color: rgb(255, 255, 255);
-					text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.75), -1px -1px 2px rgba(255, 255, 255, 0.75);
-					letter-spacing: 2px;
 					word-spacing: 4px;
-					text-align: center;
+					padding-left: 20px;
 					margin: 0 0 40px 0;
+					box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 				}
 
 				.timer__display // <div>
 				{
 					@media screen and (max-width: 499px) {
-						font-size: 5rem;
+						border-radius: 20px;
+						width: 55%;
+						font-size: 350%;
 						font-family: "Source Code Pro", cursive;
-						color: rgb(255, 255, 255);
+						color: rgb(46, 125, 50);
+						background-color: rgb(255, 255, 255);
 						text-align: center;
-						margin: 0 0 40px;
+						margin: 0 auto 40px auto;
+						padding: 20px;
+						box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 					}
 				}
 
-				.timer__start-stop-reset // <div>
+				.timer__buttons // <div>
 				{
-					display: grid;
-					grid-template-columns: 1fr 1fr;
-					justify-items: center;
-					margin-bottom: 30px;
+					padding: 0 20px 0 20px;
 
-					// ===== In the <StartStopTimer /> component =====
-					.timer__start-stop // <button>
+					.timer__align-buttons // <div>
 					{
-						@include default-buttons;
-						background-color: rgb(46, 125, 50);
-						border-style: solid;
-						border-width: 2px;
-						border-color: rgb(46, 125, 50);
-						width: calc(50% + 10%);
-						padding: calc(5px + 5px);
-						color: rgb(255, 255, 255);
-						font-size: 1rem;
-						font-weight: bold;
-						word-wrap: nowrap;
-						letter-spacing: 2px;
+						display: grid;
+						grid-template-columns: 1fr 1fr 1fr;
+						margin-bottom: 40px;
+
+						.timer__first-column // <div>
+						{
+							text-align: center;
+
+							.timer__set-add-sub // <button>
+							{
+								@include default-buttons;
+							}
+
+							.timer__set-add-sub:first-of-type {
+								margin-bottom: 10px;
+							}
+						}
+
+						.timer__second-column // <div>
+						{
+							display: flex;
+
+							.timer__start-stop // <button>
+							{
+								@include default-buttons;
+								align-self: center;
+								background-color: rgb(46, 125, 50);
+								border-style: solid;
+								border-width: 2px;
+								border-color: rgb(46, 125, 50);
+								border-radius: 2px;
+								width: 100%;
+								padding: calc(5px + 5px);
+								color: rgb(255, 255, 255);
+								font-size: 1rem;
+								font-weight: bold;
+								letter-spacing: 2px;
+							}
+
+							.timer__stop-start // <button>
+							{
+								@include default-buttons;
+								align-self: center;
+								background-color: rgb(239, 239, 239);
+								border-style: solid;
+								border-width: 2px;
+								border-color: rgb(46, 125, 50);
+								border-radius: 2px;
+								width: 100%;
+								padding: calc(5px + 5px);
+								color: rgb(46, 125, 50);
+								font-size: 1rem;
+								font-weight: bold;
+								letter-spacing: 2px;
+							}
+						}
+
+						.timer__third-column // <div>
+						{
+							text-align: center;
+
+							.timer__set-add-sub // <button>
+							{
+								@include default-buttons;
+							}
+
+							.timer__set-add-sub:first-of-type {
+								margin-bottom: 10px;
+							}
+						}
 					}
 
-					.timer__stop-start // <button>
+					.timer__reset // <div>
 					{
-						@include default-buttons;
-						background-color: rgb(204, 0, 0);
-						border-style: solid;
-						border-width: 2px;
-						border-color: rgb(204, 0, 0);
-						width: calc(50% + 10%);
-						padding: calc(5px + 5px);
-						color: rgb(255, 255, 255);
-						font-size: 1rem;
-						font-weight: bold;
-						word-wrap: nowrap;
-						letter-spacing: 2px;
-					}
+						text-align: center;
 
-					.timer__reset--active // <button>
-					{
-						@include default-buttons;
-						border-style: solid;
-						border-width: 2px;
-						border-color: rgb(204, 0, 0);
-						width: calc(50% + 10%);
-						padding: calc(5px + 5px);
-						color: rgb(204, 0, 0);
-						font-size: 1rem;
-						font-weight: bold;
-						letter-spacing: 2px;
-					}
+						.timer__reset--active // <button>
+						{
+							@include default-buttons;
+							border-style: solid;
+							border-width: 2px;
+							border-color: rgb(204, 0, 0);
+							width: 35%;
+							color: rgb(204, 0, 0);
+							font-size: 1rem;
+							font-weight: bold;
+							letter-spacing: 2px;
+						}
 
-					.timer__reset--inactive // <button>
-					{
-						@include default-buttons;
-						width: calc(50% + 10%);
-						padding: calc(5px + 5px);
-						font-size: 1rem;
-						font-weight: bold;
-						letter-spacing: 2px;
-					}
-				}
-
-				.timer__timer-at-25 // <div>
-				{
-					text-align: center;
-					margin-bottom: 20px;
-
-					// ===== In the <TimerAt25 /> =====
-					.timer__set-timer-at-25 // <button>
-					{
-						@include default-buttons;
-						width: calc(50% / 2);
-					}
-				}
-
-				.timer__add-sub-minutes // <div>
-				{
-					display: grid;
-					grid-template-columns: 1fr 1fr;
-					justify-items: center;
-					margin-bottom: 20px;
-
-					// ===== In the <AddMinutes /> & <SubMinutes /> =====
-					.timer__set-add-sub // <button>
-					{
-						@include default-buttons;
-						width: calc(50% / 1.5);
-
-					}
-				}
-
-				.timer__add-sub-seconds // <div>
-				{
-					display: grid;
-					grid-template-columns: 1fr 1fr;
-					justify-items: center;
-
-					// ===== In the <AddSeconds /> & <SubSeconds /> =====
-					.timer__set-add-sub // <button>
-					{
-						@include default-buttons;
-						width: calc(50% / 1.5);
+						.timer__reset--inactive // <button>
+						{
+							@include default-buttons;
+							width: 35%;
+							font-size: 1rem;
+							font-weight: bold;
+							letter-spacing: 2px;
+						}
 					}
 				}
-
+				
 				.modal--visible // <div>
 				{
 					display: flex;
@@ -238,13 +243,13 @@
 						.modal__close // <button>
 						{
 							@include default-buttons;
-							background-color: rgb(21, 101, 192);
+							border-radius: 2px;
+							background-color: rgb(46, 125, 50);
 							width: 80%;
 							border-style: solid;
 							border-width: 2px;
-							border-color: rgb(21, 101, 192);
+							border-color: rgb(46, 125, 50);
 							color: rgb(255, 255, 255);
-							padding: calc(5px + 5px);
 							font-weight: 700;
 							letter-spacing: 2px;
 						}
@@ -252,12 +257,12 @@
 						.modal__restart // <button>
 						{
 							@include default-buttons;
-							color: rgb(21, 101, 192);
+							border-radius: 2px;
+							color: rgb(46, 125, 50);
 							width: 80%;
-							padding: calc(5px + 5px);
 							border-style: solid;
 							border-width: 2px;
-							border-color: rgb(21, 101, 192);
+							border-color: rgb(46, 125, 50);
 							font-weight: 700;
 							letter-spacing: 2px;
 						}
