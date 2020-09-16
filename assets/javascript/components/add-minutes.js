@@ -11,7 +11,6 @@ const AddMinutes = ({minutes, setMinutes, isDisabled}) => {
 
     return (
         <button
-            // eslint-disable-next-line react/button-has-type
             type={"button"}
             id={"add1"}
             className={"timer__set-add-sub"}
