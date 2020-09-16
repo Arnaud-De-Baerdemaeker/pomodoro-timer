@@ -2,12 +2,14 @@ import React from "react";
 
 const AddSeconds = ({minutes, setMinutes, seconds, setSeconds, isDisabled}) => {
     const add = () => {
-        if (seconds < 50) {
-            setSeconds(seconds + 10);
-        } else if (minutes < 59 && seconds === 50) {
-            setSeconds(0);
-            setMinutes(minutes + 1);
-        } else if (minutes === 59 && seconds === 50) {
+        if (minutes < 59 || (minutes === 59 && seconds < 50)) {
+            if (seconds >= 50) {
+                setSeconds(seconds - 50);
+                setMinutes(minutes + 1);
+            } else {
+                setSeconds(seconds + 10);
+            }
+        } else {
             setMinutes(0);
             setSeconds(0);
         }
