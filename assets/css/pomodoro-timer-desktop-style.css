@@ -30,171 +30,207 @@
 
 @media screen and (min-width: 1024px) {
   body {
-    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     height: 100%;
     overflow-x: hidden;
     margin: 0 auto 0 auto;
-    padding: 50px 0 0 0;
-    background-image: url("./../images/water-drop.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: #E1E2E1;
     font-family: "Noto Sans KR", cursive;
   }
+  body .timer {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 100%;
+  }
   body .timer div .timer__title {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    height: 15vh;
+    line-height: 15vh;
+    background-color: #2e7c31;
     color: white;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.75), -1px -1px 2px rgba(255, 255, 255, 0.75);
-    letter-spacing: 2px;
     word-spacing: 4px;
-    text-align: center;
-    margin: 0 0 50px 0;
+    padding-left: 20px;
+    margin: 0 0 40px 0;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
   body .timer div .timer__display {
-    font-size: 8rem;
+    border-radius: 20px;
+    width: 40%;
+    font-size: 500%;
     font-family: "Source Code Pro", cursive;
-    color: white;
+    color: #2e7d32;
+    background-color: white;
     text-align: center;
-    margin: 0 0 50px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
-  body .timer div .timer__start-stop-reset {
+}
+
+@media screen and (min-width: 1024px) {
+  body .timer div .timer__buttons {
+    padding: 0 20px 0 20px;
+  }
+  body .timer div .timer__buttons .timer__align-buttons {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    margin-bottom: 30px;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 40px;
   }
-  body .timer div .timer__start-stop-reset .timer__start-stop {
-    width: 50%;
+  body .timer div .timer__buttons .timer__align-buttons .timer__first-column {
+    text-align: center;
+  }
+  body .timer div .timer__buttons .timer__align-buttons .timer__first-column .timer__set-add-sub {
     border: none;
+    width: 75px;
+    height: 75px;
+    border-radius: 75px;
     margin: 0;
-    padding: 5px;
-    border-radius: 2px;
+    padding: 0;
     cursor: pointer;
-    background-color: #efefef;
+    background-color: white;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  body .timer div .timer__buttons .timer__align-buttons .timer__first-column .timer__set-add-sub:first-of-type {
+    margin-bottom: 10px;
+  }
+  body .timer div .timer__buttons .timer__align-buttons .timer__second-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 60%;
+    margin: 0 auto 0 auto;
+  }
+  body .timer div .timer__buttons .timer__align-buttons .timer__second-column .timer__start-stop {
+    border: none;
+    width: 75px;
+    height: 75px;
+    border-radius: 75px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    background-color: white;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     background-color: #2e7d32;
     border-style: solid;
     border-width: 2px;
     border-color: #2e7d32;
-    width: calc(50% + 10%);
+    border-radius: 2px;
     padding: calc(5px + 5px);
     color: white;
     font-size: 1rem;
     font-weight: bold;
-    word-wrap: nowrap;
     letter-spacing: 2px;
   }
-  body .timer div .timer__start-stop-reset .timer__stop-start {
-    width: 50%;
+  body .timer div .timer__buttons .timer__align-buttons .timer__second-column .timer__stop-start {
     border: none;
+    width: 75px;
+    height: 75px;
+    border-radius: 75px;
     margin: 0;
-    padding: 5px;
-    border-radius: 2px;
+    padding: 0;
     cursor: pointer;
-    background-color: #efefef;
-    background-color: #cc0000;
+    background-color: white;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    background-color: white;
     border-style: solid;
     border-width: 2px;
-    border-color: #cc0000;
-    width: calc(50% + 10%);
+    border-color: #2e7d32;
+    border-radius: 2px;
     padding: calc(5px + 5px);
-    color: white;
+    color: #2e7d32;
     font-size: 1rem;
     font-weight: bold;
-    word-wrap: nowrap;
     letter-spacing: 2px;
   }
-  body .timer div .timer__start-stop-reset .timer__reset--active {
-    width: 50%;
+  body .timer div .timer__buttons .timer__align-buttons .timer__third-column {
+    text-align: center;
+  }
+  body .timer div .timer__buttons .timer__align-buttons .timer__third-column .timer__set-add-sub {
     border: none;
+    width: 75px;
+    height: 75px;
+    border-radius: 75px;
     margin: 0;
-    padding: 5px;
-    border-radius: 2px;
+    padding: 0;
     cursor: pointer;
-    background-color: #efefef;
+    background-color: white;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  body .timer div .timer__buttons .timer__align-buttons .timer__third-column .timer__set-add-sub:first-of-type {
+    margin-bottom: 10px;
+  }
+  body .timer div .timer__buttons .timer__reset {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto 0 auto;
+  }
+  body .timer div .timer__buttons .timer__reset .timer__reset--active {
+    border: none;
+    width: 75px;
+    height: 75px;
+    border-radius: 75px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    background-color: white;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     border-style: solid;
     border-width: 2px;
     border-color: #cc0000;
-    width: calc(50% + 10%);
-    padding: calc(5px + 5px);
+    border-radius: 2px !important;
     color: #cc0000;
     font-size: 1rem;
     font-weight: bold;
     letter-spacing: 2px;
   }
-  body .timer div .timer__start-stop-reset .timer__reset--inactive {
-    width: 50%;
+  body .timer div .timer__buttons .timer__reset .timer__reset--inactive {
     border: none;
+    width: 75px;
+    height: 75px;
+    border-radius: 75px;
     margin: 0;
-    padding: 5px;
-    border-radius: 2px;
+    padding: 0;
     cursor: pointer;
-    background-color: #efefef;
-    width: calc(50% + 10%);
-    padding: calc(5px + 5px);
+    background-color: white;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: 35%;
+    border-radius: 2px !important;
     font-size: 1rem;
     font-weight: bold;
-  }
-  body .timer div .timer__timer-at-25 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  body .timer div .timer__timer-at-25 .timer__set-timer-at-25 {
-    width: 50%;
-    border: none;
-    margin: 0;
-    padding: 5px;
-    border-radius: 2px;
-    cursor: pointer;
-    background-color: #efefef;
-    width: calc(50% / 2);
-  }
-  body .timer div .timer__add-sub-minutes {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    margin-bottom: 20px;
-  }
-  body .timer div .timer__add-sub-minutes .timer__set-add-sub {
-    width: 50%;
-    border: none;
-    margin: 0;
-    padding: 5px;
-    border-radius: 2px;
-    cursor: pointer;
-    background-color: #efefef;
-    width: calc(50% / 1.5);
-  }
-  body .timer div .timer__add-sub-seconds {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    justify-items: center;
-  }
-  body .timer div .timer__add-sub-seconds .timer__set-add-sub {
-    width: 50%;
-    border: none;
-    margin: 0;
-    padding: 5px;
-    border-radius: 2px;
-    cursor: pointer;
-    background-color: #efefef;
-    width: calc(50% / 1.5);
+    letter-spacing: 2px;
   }
   body .timer div .modal--visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-animation-name: pulse;
             animation-name: pulse;
     -webkit-animation-duration: 1s;
             animation-duration: 1s;
     -webkit-animation-iteration-count: 1;
             animation-iteration-count: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -209,13 +245,13 @@
     border-radius: 5px;
   }
   body .timer div .modal--visible .modal__content {
-    width: 80%;
+    padding: 20px;
     margin: 0 auto 0 auto;
   }
   body .timer div .modal--visible .modal__content .modal__text .modal__image-box {
-    margin: 0 auto 50px auto;
-    width: 200px;
-    height: 200px;
+    margin: 0 auto 40px auto;
+    width: 175px;
+    height: 175px;
   }
   body .timer div .modal--visible .modal__content .modal__text .modal__image-box .modal__image {
     width: 100%;
@@ -224,12 +260,12 @@
   body .timer div .modal--visible .modal__content .modal__text .modal__work {
     margin: 0 0 20px 0;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   body .timer div .modal--visible .modal__content .modal__text .modal__rest {
-    margin: 0 0 50px 0;
+    margin: 0 0 40px 0;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   body .timer div .modal--visible .modal__buttons {
     display: -ms-grid;
@@ -239,35 +275,43 @@
     justify-items: center;
   }
   body .timer div .modal--visible .modal__buttons .modal__close {
-    width: 50%;
     border: none;
+    width: 75px;
+    height: 75px;
+    border-radius: 75px;
     margin: 0;
-    padding: 5px;
-    border-radius: 2px;
+    padding: 0;
     cursor: pointer;
-    background-color: #efefef;
-    background-color: #1565c0;
+    background-color: white;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    background-color: #2e7d32;
+    width: 80%;
     border-style: solid;
     border-width: 2px;
-    border-color: #1565c0;
+    border-color: #2e7d32;
     color: white;
-    padding: calc(5px + 5px);
     font-weight: 700;
     letter-spacing: 2px;
   }
   body .timer div .modal--visible .modal__buttons .modal__restart {
-    width: 50%;
     border: none;
+    width: 75px;
+    height: 75px;
+    border-radius: 75px;
     margin: 0;
-    padding: 5px;
-    border-radius: 2px;
+    padding: 0;
     cursor: pointer;
-    background-color: #efefef;
-    color: #1565c0;
-    padding: calc(5px + 5px);
+    background-color: white;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    color: #2e7d32;
+    width: 80%;
     border-style: solid;
     border-width: 2px;
-    border-color: #1565c0;
+    border-color: #2e7d32;
     font-weight: 700;
     letter-spacing: 2px;
   }
