@@ -135,6 +135,7 @@
     padding: calc(5px + 5px);
     font-size: 1rem;
     font-weight: bold;
+    letter-spacing: 2px;
   }
   body .timer div .timer__timer-at-25 {
     text-align: center;
