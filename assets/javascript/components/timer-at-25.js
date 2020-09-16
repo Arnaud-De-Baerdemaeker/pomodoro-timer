@@ -14,7 +14,7 @@ const TimerAt25 = ({setMinutes, setSeconds, isDisabled}) => {
             className={"timer__set-timer-at-25"}
             disabled={isDisabled}
             onClick={setAt25}>
-            {"Set to 25 mins"}
+            {"25m"}
         </button>
     );
 };
