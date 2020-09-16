@@ -16,7 +16,7 @@ const AddMinutes = ({minutes, setMinutes, isDisabled}) => {
             className={"timer__set-add-sub"}
             disabled={isDisabled}
             onClick={() => setMinutes(add)}>
-            {"+ 1 min"}
+            {"+ 1m"}
         </button>
     );
 };
