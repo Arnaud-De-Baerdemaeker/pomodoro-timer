@@ -1,4 +1,3 @@
-/* eslint-disable global-require */
 import React from "react";
 
 const Modal = ({
@@ -14,6 +13,7 @@ const Modal = ({
         <div className={"modal__text"}>
             <figure className={"modal__image-box"}>
                 <img
+                    // eslint-disable-next-line global-require
                     src={require("./../../images/applause.png")}
                     alt={"Applause"}
                     className={"modal__image"}
