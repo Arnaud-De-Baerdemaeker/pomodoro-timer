@@ -4,7 +4,7 @@ This is my Pomodoro timer made with React.js as a project during my formation wi
 You can check it here :
 [Pomodoro timer](https://arnaud-pomodoro-timer.netlify.app/)
 
-\[Pomodoro timer homepage\]\(\./assets/images/pomodoro\-timer\-homepage\.png\)
+[Pomodoro timer homepage](assets/images/pomodoro-timer-homepage.png)
 
 ## What it can do ?
 
